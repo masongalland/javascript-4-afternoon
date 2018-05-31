@@ -1,4 +1,4 @@
-/* 
+/*
   Once you complete a problem, refresh ./constructors.html in your browser and check to see if the problem's test(s) are passing.
   Passed tests will be indicated by a green circle.
   Failed tests will be indicated by a red X.
@@ -14,7 +14,10 @@
 */
 
 // Code here
-
+function CarFactory(make, model){
+  this.make = make;
+  this.model = model;
+}
 
 
 ////////// PROBLEM 2 //////////
@@ -27,13 +30,13 @@ function Employee(name, email, hireDate) {
 }
 // Do not edit the code above.
 
-/* 
+/*
   Invoke the constructor function above and pass in 'Bob', 'bob@gmail.com', and '01-02-98' as arguments.
   Assign the result of the invocation to a variable called bob.
 */
 
 // Code here
-
+const bob = new Employee("Bob", "bob@gmail.com", '01-02-98')
 
 
 ////////// PROBLEM 4 //////////
@@ -55,4 +58,13 @@ mustang.moveCar(); // Increments mustang' move property by 10. Returns the new m
 
 // Code here
 
+function Car(make, model, year){
+  this.make = make;
+  this.model = model;
+  this.year = year;
+  this.move = 0;
+  this.moveCar = function(){
+    return this.move += 10;
+  }
+}
 
